@@ -11,6 +11,7 @@ def recommend(titles, user_profile):
             "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            "stream": False
         })
     return response.json()["message"]["content"]

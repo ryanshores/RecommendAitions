@@ -13,8 +13,10 @@ def build_prompt(titles, user_profile):
             'title': t.get('title') or t.get('name'),
             'overview': t.get('overview'),
             'genres': t.get('genre_ids'),
-            'release_date': (t.get('release_date') or t.get('first_air_date'))[:4],
-            'rating': t.get('vote_average') or t.get('vote_count')
+            'release_date': (t.get('release_date') or t.get('first_air_date')),
+            'vote_average': t.get('vote_average'),
+            'vote_count': t.get('vote_count'),
+            'popularity': t.get('popularity'),
         }
         for t in titles
     ]

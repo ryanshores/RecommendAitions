@@ -12,7 +12,7 @@ class Settings(BaseSettings):
 
     TMDB_API_KEY: SecretStr
     TMDB_BASE_URL: str = "https://api.themoviedb.org/3/"
-    OLLAMA_URL: str = "http://localhost:11434/api/generate"
+    OLLAMA_URL: str = "http://localhost:11434/api/chat"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 3600
 
 
