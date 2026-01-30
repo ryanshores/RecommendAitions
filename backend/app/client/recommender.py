@@ -1,12 +1,12 @@
 import requests
 
-from backend.app.utils.prompts import build_prompt, SYSTEM_PROMPT
-from backend.app.config import settings
+from services.prompts import build_prompt, SYSTEM_PROMPT
+from config import settings
 
 
 def recommend(titles, user_profile):
     prompt = build_prompt(titles, user_profile)
-    response = requests.post(settings.OLLAMA_URL, json={
+    response = requests.post(settings.ollama.url, json={
             "model": "qwen2.5-coder:7b",
             "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},

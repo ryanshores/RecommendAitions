@@ -1,8 +1,8 @@
 import json
 from unittest.mock import patch, MagicMock
-from backend.app.client.recommender import recommend
+from app.client.recommender import recommend
 
-@patch('backend.app.client.recommender.requests.post')
+@patch('app.client.recommender.requests.post')
 def test_recommend(mock_post):
     # Mock Ollama response
     mock_response = MagicMock()
