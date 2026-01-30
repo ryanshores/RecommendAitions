@@ -1,6 +1,9 @@
 # -------- build stage --------
 FROM node:20-alpine AS build-stage
 
+ARG API_URL=http://localhost:8000
+ENV VITE_API_URL=$API_URL
+
 WORKDIR /app
 
 COPY package.json package-lock.json ./
